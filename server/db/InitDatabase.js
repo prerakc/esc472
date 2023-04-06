@@ -9,11 +9,11 @@ const clearDB = async () => {
 const initTagDB = async () => {
     const hardcoded_tags = [
         {
-            uuid: '1',
+            uuid: 'CC990039',
             id: 1
         },
         {
-            uuid: '2',
+            uuid: '33F43817',
             id: 2
         }
     ]

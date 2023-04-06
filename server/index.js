@@ -16,7 +16,7 @@ const { Tag } = require('./models/TagModel')
 const { Dog } = require('./models/DogModel')
 
 initDB().then(() => {
-    const port = new SerialPort({ path: 'COM7', baudRate: 9600 })
+    const port = new SerialPort({ path: 'COM9', baudRate: 9600 })
     const parser = port.pipe(new ReadlineParser({ delimiter: '\r\n' }))
 
     const app = express()
@@ -66,11 +66,11 @@ initDB().then(() => {
     //     console.log('Buffered Data:', (Buffer.from(data)))
     // })
 
-    const port2 = new SerialPort({ path: 'COM8', baudRate: 9600 })
-
-    setInterval(function() {
-        port2.write('1\r\n')
-    }, 5000)
+    // const port2 = new SerialPort({ path: 'COM8', baudRate: 9600 })
+    //
+    // setInterval(function() {
+    //     port2.write('1\r\n')
+    // }, 5000)
 
     httpServer.listen(3000, () => {
         console.log('listening on *:3000')
